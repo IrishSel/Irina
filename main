@@ -32,7 +32,3 @@ for i in range(size):
 
 plt.imshow(rotate)
 plt.show()
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
