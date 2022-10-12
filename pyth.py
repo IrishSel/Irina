@@ -1,8 +1,9 @@
 
 import serial
 import time
+import sys
 
-
+sys.executable
 lenghts = { 's': 3,
             'u': 0,
             'd': 0}
@@ -20,10 +21,9 @@ def send(ser, message, mesg_len):
         result = result.strip()
         print(result)
 
-
-    if _name_ == '_main_':
-        ser = get_connection("COM11")
-        while True:
-            inp = input("Enter command:")
-            length = lenghts.get(inp, 17)
-            send(ser, inp.encode(),length)
+if __name__ == '__main__':
+    ser = get_connection("COM11")
+    while True:
+        inp = input("Enter command:")
+        length = lenghts.get(inp, 17)
+        send(ser, inp.encode(),length)
